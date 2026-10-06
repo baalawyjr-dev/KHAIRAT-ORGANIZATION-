@@ -3,80 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Khyrat Organisation</title>
-
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
-    <div class="logo">KHYRAT ORGANISATION</div>
+    <div class="logo">
+      <img src="./IMG-20260930-WA0159.jpg" alt="Khyrat Organisation Logo">
+      <div>
+        <h2>Khyrat</h2>
+        <span>ORGANISATION</span>
+      </div>
+    </div>
 
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About Us</a>
       <a href="#programs">Programs</a>
       <a href="#contact">Contact</a>
+      <a href="#donate" class="donate-btn">♥ Donate</a>
     </nav>
   </header>
 
+
+  <!-- HERO -->
   <section id="home" class="hero">
 
-    <img
-      src="IMG-20260930-WA0159.jpg"
-      alt="Khyrat Organisation Logo"
-      class="hero-logo"
-    >
+    <div class="hero-content">
+      <p class="small-title">WELCOME TO KHYRAT ORGANISATION</p>
 
-    <h1>Spreading Blessings, Changing Lives.</h1>
+      <h1>Spreading Blessings,<br>Changing Lives.</h1>
 
-    <p>
-      Welcome to Khyrat Organisation — dedicated to helping
-      communities, supporting those in need and creating positive change.
-    </p>
+      <p>
+        We are a community-driven organisation dedicated to
+        helping communities, supporting those in need and
+        creating a better tomorrow.
+      </p>
 
-    <a href="#about" class="btn">Learn More</a>
+      <div class="hero-buttons">
+        <a href="#donate" class="btn gold">♥ Donate Now</a>
+        <a href="#about" class="btn outline">Learn More →</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="./IMG-20260930-WA0159.jpg" alt="Khyrat Organisation">
+    </div>
 
   </section>
 
+
+  <!-- ABOUT -->
   <section id="about" class="about">
 
-    <h2>About Khyrat Organisation</h2>
+    <div class="about-text">
+      <p class="small-title">ABOUT US</p>
 
-    <p>
-      Khyrat Organisation is committed to serving the community
-      through kindness, charity, education and support for people
-      in need.
-    </p>
+      <h2>Khyrat Organisation</h2>
+
+      <p>
+        Khyrat Organisation is committed to serving communities
+        through kindness, charity, education and support for
+        people in need. We believe in building a better tomorrow
+        through collective effort and compassion.
+      </p>
+
+      <a href="#programs" class="btn blue">Learn More →</a>
+    </div>
+
+    <div class="about-card">
+      <div class="about-icon">♥</div>
+      <h3>Together We Can</h3>
+      <p>
+        Every act of kindness can make a meaningful difference
+        in someone's life.
+      </p>
+    </div>
 
   </section>
 
+
+  <!-- PROGRAMS -->
   <section id="programs" class="programs">
 
-    <h2>Our Programs</h2>
+    <p class="small-title">OUR PROGRAMS</p>
 
-    <div class="cards">
+    <h2>Building Stronger Communities</h2>
+
+    <p class="section-description">
+      We focus on key areas that bring real and lasting change.
+    </p>
+
+    <div class="program-cards">
 
       <div class="card">
+        <div class="card-icon">👥</div>
         <h3>Community Support</h3>
         <p>
-          Supporting families and individuals in our community.
+          Food aid, basic needs and support for families in need.
         </p>
       </div>
 
       <div class="card">
+        <div class="card-icon">🎓</div>
         <h3>Education</h3>
         <p>
-          Helping young people access education and opportunities.
+          Supporting access to quality education for a brighter future.
         </p>
       </div>
 
       <div class="card">
+        <div class="card-icon">♥</div>
         <h3>Charity</h3>
         <p>
-          Providing assistance to people facing difficult situations.
+          Providing assistance to vulnerable individuals and families.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🌱</div>
+        <h3>Development</h3>
+        <p>
+          Sustainable projects for long-term community growth.
         </p>
       </div>
 
@@ -84,25 +135,102 @@
 
   </section>
 
+
+  <!-- IMPACT -->
+  <section class="impact">
+
+    <div>
+      <strong>1,200+</strong>
+      <span>People Supported</span>
+    </div>
+
+    <div>
+      <strong>350+</strong>
+      <span>Students Assisted</span>
+    </div>
+
+    <div>
+      <strong>500+</strong>
+      <span>Food Packs Distributed</span>
+    </div>
+
+    <div>
+      <strong>10+</strong>
+      <span>Projects Completed</span>
+    </div>
+
+  </section>
+
+
+  <!-- DONATE -->
+  <section id="donate" class="donate-section">
+
+    <div>
+      <p class="donate-title">Be Part<br>of the Change</p>
+    </div>
+
+    <div>
+      <h2>Get Involved</h2>
+      <p>
+        Your support helps us reach more people, create
+        opportunities and bring hope to those in need.
+      </p>
+    </div>
+
+    <div class="donate-actions">
+      <a href="#" class="btn gold">♥ Donate Now</a>
+      <a href="#" class="btn whatsapp">WhatsApp Us</a>
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
   <section id="contact" class="contact">
 
     <h2>Contact Us</h2>
 
-    <p>
-      Get in touch with Khyrat Organisation.
-    </p>
+    <p>We would love to hear from you.</p>
 
-    <a href="tel:+254000000000" class="btn">
-      Contact Us
-    </a>
+    <p>📞 +254 712 477 511</p>
+    <p>📍 Mombasa, Kenya</p>
 
   </section>
 
+
+  <!-- FOOTER -->
   <footer>
-    <p>
-      © 2026 Khyrat Organisation. All Rights Reserved.
-    </p>
+
+    <div class="footer-logo">
+      <img src="./IMG-20260930-WA0159.jpg" alt="Khyrat Logo">
+      <h2>Khyrat Organisation</h2>
+      <p>Spreading blessings, changing lives.</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#programs">Programs</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <p>📞 +254 712 477 511</p>
+      <p>📍 Mombasa, Kenya</p>
+    </div>
+
+    <div>
+      <h3>Follow Us</h3>
+      <p>Facebook • Instagram • YouTube</p>
+    </div>
+
   </footer>
+
+  <div class="copyright">
+    © 2026 Khyrat Organisation. All Rights Reserved.
+  </div>
 
 </body>
 </html>
