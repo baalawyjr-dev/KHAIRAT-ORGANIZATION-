@@ -361,6 +361,17 @@ nav a:hover {
   border: 2px solid white;
   color: white;
   text-align: center;
+  padding: 14px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.whatsapp:hover {
+  background: white;
+  color: #062f5f;
+  transform: translateY(-2px);
 }
 
 /* CONTACT */
