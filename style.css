@@ -602,3 +602,26 @@ footer a:hover {
     height: 220px;
   }
 }
+/* FOOTER MOBILE */
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+    padding: 45px 20px;
+  }
+
+  .footer-logo img {
+    max-width: 120px;
+    margin: 0 auto 15px;
+  }
+
+  footer h3 {
+    margin-bottom: 12px;
+  }
+
+  footer a {
+    display: block;
+    margin: 8px 0;
+  }
+}
