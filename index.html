@@ -343,7 +343,20 @@
 <script>
 function setLanguage(lang) {
   const sw = lang === 'sw';
+document.querySelector('#nav-home').textContent =
+    sw ? 'Mwanzo' : 'Home';
 
+  document.querySelector('#nav-about').textContent =
+    sw ? 'Kuhusu Sisi' : 'About Us';
+
+  document.querySelector('#nav-programs').textContent =
+    sw ? 'Programu' : 'Programs';
+
+  document.querySelector('#nav-contact').textContent =
+    sw ? 'Wasiliana Nasi' : 'Contact';
+
+  document.querySelector('#nav-donate').textContent =
+    sw ? '♥ Changia' : '♥ Donate';
   document.querySelector('#events h2').textContent =
     sw ? 'Miradi Ijayo' : 'Upcoming Projects';
 
