@@ -335,5 +335,54 @@
     © 2026 Khyrat Organisation. All Rights Reserved.
   </div>
 
+<!-- UPCOMING EVENTS -->
+<section id="events" style="padding:40px 20px;text-align:center;">
+  <h2>Upcoming Events | Matukio Yajayo</h2>
+
+  <article style="max-width:600px;margin:20px auto;">
+    <img src="./IMG-20261009-WA0439.jpg"
+         alt="Khyrat Organisation Mega Pads Drive"
+         style="width:100%;border-radius:12px;">
+
+    <h3>Mega Pads Drive — Lamu</h3>
+    <p id="event-date">
+      Planned for December 2026 — exact date to be announced.
+    </p>
+    <p id="event-description">
+      Khyrat Organisation is planning a Mega Pads Drive in Lamu.
+      More details will be announced soon.
+    </p>
+
+    <a href="https://wa.me/254792343660">
+      Contact Us | Wasiliana Nasi
+    </a>
+  </article>
+</section>
+
+<!-- LANGUAGE SWITCH -->
+<div style="text-align:center;padding:20px;">
+  <button onclick="setLanguage('en')">English</button>
+  <button onclick="setLanguage('sw')">Kiswahili</button>
+</div>
+
+<script>
+function setLanguage(lang) {
+  const sw = lang === 'sw';
+
+  document.querySelector('#events h2').textContent =
+    sw ? 'Matukio Yajayo' : 'Upcoming Events';
+
+  document.querySelector('#event-date').textContent =
+    sw
+      ? 'Linapangwa kwa Desemba 2026 — tarehe kamili itatangazwa.'
+      : 'Planned for December 2026 — exact date to be announced.';
+
+  document.querySelector('#event-description').textContent =
+    sw
+      ? 'Khyrat Organisation inapanga kufanya Mega Pads Drive huko Lamu. Maelezo zaidi yatatangazwa hivi karibuni.'
+      : 'Khyrat Organisation is planning a Mega Pads Drive in Lamu. More details will be announced soon.';
+}
+</script>
+
 </body>
 </html>
