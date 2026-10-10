@@ -337,7 +337,12 @@
 <script>
 function setLanguage(lang) {
   const sw = lang === 'sw';
-  
+ 
+  document.querySelector('#hero-description').textContent =
+    sw
+      ? 'Khyrat Organisation imejitolea kuwasaidia yatima na watoto walio katika mazingira magumu kupitia malezi, elimu, mahitaji ya msingi na fursa za maisha bora ya baadaye.'
+      : 'Khyrat Organisation is dedicated to supporting orphans and vulnerable children through care, education, basic needs and opportunities for a brighter future.';
+ 
   document.querySelector('#hero-title').textContent =
     sw
       ? 'Kuwasaidia Yatima na Kuwawezesha Watoto Walio Katika Mazingira Hatarishi.'
