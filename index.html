@@ -336,53 +336,129 @@
   </div>
 
 
+
 <script>
 function setLanguage(lang) {
   const sw = lang === 'sw';
- 
-  document.querySelector('#hero-donate').textContent =
-    sw ? '💚 Changia Sasa' : '💚 Donate Now';
 
-  document.querySelector('#hero-learn').textContent =
-    sw ? 'Jifunze Zaidi →' : 'Learn More →';
+  const translations = {
+    'hero-title': [
+      'Supporting Orphans, Empowering Vulnerable Children.',
+      'Kuwasaidia Yatima na Kuwawezesha Watoto Walio Katika Mazingira Magumu.'
+    ],
+    'hero-description': [
+      'Khyrat Organisation is dedicated to supporting orphans and vulnerable children through care, education, basic needs and opportunities for a brighter future.',
+      'Khyrat Organisation imejitolea kuwasaidia yatima na watoto walio katika mazingira magumu kupitia malezi, elimu, mahitaji ya msingi na fursa za maisha bora ya baadaye.'
+    ],
+    'hero-donate': ['💚 Donate Now', '💚 Changia Sasa'],
+    'hero-learn': ['Learn More →', 'Jifunze Zaidi →'],
+    'nav-home': ['Home', 'Mwanzo'],
+    'nav-about': ['About Us', 'Kuhusu Sisi'],
+    'nav-programs': ['Programs', 'Programu'],
+    'nav-contact': ['Contact', 'Wasiliana Nasi'],
+    'nav-donate': ['♥ Donate', '♥ Changia'],
+    'event-date': [
+      'Planned for December 2026 — exact date to be announced.',
+      'Linapangwa kwa Desemba 2026 — tarehe kamili itatangazwa.'
+    ],
+    'event-description': [
+      'Khyrat Organisation is planning a Mega Pads Drive in Lamu. More details will be announced soon.',
+      'Khyrat Organisation inapanga kufanya Mega Pads Drive huko Lamu. Maelezo zaidi yatatangazwa hivi karibuni.'
+    ]
+  };
 
-  document.querySelector('#hero-description').textContent =
-    sw
-      ? 'Khyrat Organisation imejitolea kuwasaidia yatima na watoto walio katika mazingira magumu kupitia malezi, elimu, mahitaji ya msingi na fursa za maisha bora ya baadaye.'
-      : 'Khyrat Organisation is dedicated to supporting orphans and vulnerable children through care, education, basic needs and opportunities for a brighter future.';
- 
-  document.querySelector('#hero-title').textContent =
-    sw
-      ? 'Kuwasaidia Yatima na Kuwawezesha Watoto Walio Katika Mazingira Hatarishi.'
-      : 'Supporting Orphans, Empowering Vulnerable Children.';
-document.querySelector('#nav-home').textContent =
-    sw ? 'Mwanzo' : 'Home';
+  Object.entries(translations).forEach(([id, values]) => {
+    const element = document.getElementById(id);
+    if (element) element.textContent = values[sw ? 1 : 0];
+  });
 
-  document.querySelector('#nav-about').textContent =
-    sw ? 'Kuhusu Sisi' : 'About Us';
+  const textMap = [
+    ['.hero .small-title', 'WELCOME TO KHYRAT ORGANISATION', 'KARIBU KHYRAT ORGANISATION'],
+    ['.about-text .small-title', 'ABOUT US', 'KUHUSU SISI'],
+    ['.about-text h2', 'Supporting Children, Building Hope', 'Kuwasaidia Watoto, Kujenga Matumaini'],
+    ['.about-text > p:not(.small-title)', 'Khyrat Organisation is dedicated to supporting orphans and vulnerable children through care, education, basic needs and opportunities for a brighter future.', 'Khyrat Organisation imejitolea kuwasaidia yatima na watoto walio katika mazingira magumu kupitia malezi, elimu, mahitaji ya msingi na fursa za maisha bora ya baadaye.'],
+    ['.about-text .btn', 'Learn More →', 'Jifunze Zaidi →'],
+    ['.about-card h3', 'Together We Can', 'Tunaweza Pamoja'],
+    ['.about-card p', "Every act of kindness can make a meaningful difference in someone's life.", 'Kila tendo la wema linaweza kuleta mabadiliko yenye maana katika maisha ya mtu.'],
+    ['#programs > .small-title', 'OUR PROGRAMS', 'PROGRAMU ZETU'],
+    ['#programs > h2', 'Supporting Children, Creating Hope', 'Kuwasaidia Watoto, Kuleta Matumaini'],
+    ['#programs > .section-description', 'Our programs focus on the care, education, basic needs and development of orphans and vulnerable children.', 'Programu zetu zinalenga malezi, elimu, mahitaji ya msingi na maendeleo ya yatima na watoto walio katika mazingira magumu.'],
+    ['#projects > .small-title', 'OUR PROJECTS', 'MIRADI YETU'],
+    ['#projects > h2', 'Making a Difference Through Action', 'Kuleta Mabadiliko Kupitia Vitendo'],
+    ['#projects > .section-description', 'Through compassion and community support, Khyrat Organisation continues to bring hope and support to orphans and vulnerable children.', 'Kupitia huruma na msaada wa jamii, Khyrat Organisation inaendelea kuleta matumaini na kuwasaidia yatima na watoto walio katika mazingira magumu.'],
+    ['.donate-title', 'Be Part of the Change', 'Kuwa Sehemu ya Mabadiliko'],
+    ['.donate-section h2', 'Support Orphans & Vulnerable Children', 'Wasaidie Yatima na Watoto Walio Katika Mazingira Magumu'],
+    ['.donate-section div:nth-child(2) > p:not([style])', 'Your donation helps provide care, education, food and essential support to orphans and vulnerable children. Together, we can give every child hope for a brighter future.', 'Mchango wako husaidia kutoa malezi, elimu, chakula na mahitaji muhimu kwa yatima na watoto walio katika mazingira magumu. Pamoja, tunaweza kumpa kila mtoto matumaini ya maisha bora ya baadaye.'],
+    ['.donate-actions a:first-child', 'Donate via WhatsApp', 'Changia kupitia WhatsApp'],
+    ['.donate-actions a:last-child', 'Call Us', 'Tupigie Simu'],
+    ['.footer-logo > p', 'Spreading blessings, changing lives.', 'Kueneza baraka, kubadilisha maisha.'],
+    ['footer > div:nth-child(2) h3', 'Quick Links', 'Viungo vya Haraka'],
+    ['footer > div:nth-child(3) h3', 'Contact', 'Mawasiliano'],
+    ['footer > div:nth-child(4) h3', 'Follow Us', 'Tufuatilie'],
+    ['.copyright', '© 2026 Khyrat Organisation. All Rights Reserved.', '© 2026 Khyrat Organisation. Haki zote zimehifadhiwa.']
+  ];
 
-  document.querySelector('#nav-programs').textContent =
-    sw ? 'Programu' : 'Programs';
+  textMap.forEach(([selector, en, swText]) => {
+    const element = document.querySelector(selector);
+    if (element) element.textContent = sw ? swText : en;
+  });
 
-  document.querySelector('#nav-contact').textContent =
-    sw ? 'Wasiliana Nasi' : 'Contact';
+  const cardTitles = [
+    ['Orphan Support', 'Msaada kwa Yatima'],
+    ['Education Support', 'Msaada wa Elimu'],
+    ['Food & Basic Needs', 'Chakula na Mahitaji ya Msingi'],
+    ['Child Development', 'Maendeleo ya Watoto']
+  ];
 
-  document.querySelector('#nav-donate').textContent =
-    sw ? '♥ Changia' : '♥ Donate';
-  document.querySelector('#events h2').textContent =
-    sw ? 'Miradi Ijayo' : 'Upcoming Projects';
+  document.querySelectorAll('#programs .card').forEach((card, i) => {
+    const title = card.querySelector('h3');
+    const p = card.querySelector('p');
+    if (title && cardTitles[i]) title.textContent = cardTitles[i][sw ? 1 : 0];
 
-  document.querySelector('#event-date').textContent =
-    sw
-      ? 'Linapangwa kwa Desemba 2026 — tarehe kamili itatangazwa.'
-      : 'Planned for December 2026 — exact date to be announced.';
+    const descriptions = [
+      ['Providing care, basic needs and support for orphaned children.', 'Kutoa malezi, mahitaji ya msingi na msaada kwa watoto yatima.'],
+      ['Helping orphans and vulnerable children access education and learning materials.', 'Kuwasaidia yatima na watoto walio katika mazingira magumu kupata elimu na vifaa vya kujifunzia.'],
+      ['Providing food, clothing and essential support to children in need.', 'Kutoa chakula, mavazi na msaada muhimu kwa watoto wanaohitaji.'],
+      ['Creating opportunities that help children grow, learn and build a brighter future.', 'Kuunda fursa zinazowasaidia watoto kukua, kujifunza na kujenga maisha bora ya baadaye.']
+    ];
+    if (p && descriptions[i]) p.textContent = descriptions[i][sw ? 1 : 0];
+  });
 
-  document.querySelector('#event-description').textContent =
-    sw
-      ? 'Khyrat Organisation inapanga kufanya Mega Pads Drive huko Lamu. Maelezo zaidi yatatangazwa hivi karibuni.'
-      : 'Khyrat Organisation is planning a Mega Pads Drive in Lamu. More details will be announced soon.';
+  const projectCards = [
+    ['Supporting Children', 'Kuwasaidia Watoto', 'Providing care, kindness and essential support to vulnerable children.', 'Kutoa malezi, wema na msaada muhimu kwa watoto walio katika mazingira magumu.'],
+    ['Community Support', 'Msaada kwa Jamii', 'Working together with the community to create hope and positive change.', 'Kushirikiana na jamii kuleta matumaini na mabadiliko chanya.'],
+    ['Helping Families', 'Kusaidia Familia', 'Supporting families and children with essential needs and assistance.', 'Kuzisaidia familia na watoto kwa mahitaji muhimu na msaada.'],
+    ['Care & Compassion', 'Malezi na Huruma', 'Creating a caring environment where every child can feel supported.', 'Kuunda mazingira ya kujali ambapo kila mtoto anaweza kupata msaada.'],
+    ['Education Support', 'Msaada wa Elimu', 'Encouraging education and opportunities for a brighter future.', 'Kuhamasisha elimu na fursa za maisha bora ya baadaye.'],
+    ['Building Hope', 'Kujenga Matumaini', 'Together, we are building brighter futures for vulnerable children.', 'Pamoja, tunajenga maisha bora ya baadaye kwa watoto walio katika mazingira magumu.']
+  ];
+
+  document.querySelectorAll('.project-item').forEach((item, i) => {
+    if (!projectCards[i]) return;
+    const h3 = item.querySelector('h3');
+    const p = item.querySelector('p');
+    if (h3) h3.textContent = projectCards[i][sw ? 1 : 0];
+    if (p) p.textContent = projectCards[i][sw ? 3 : 2];
+  });
+
+  document.querySelectorAll('.impact div span').forEach((el, i) => {
+    const en = ['Supporting Orphans', 'Education Support', 'Food & Basic Needs', 'Building Brighter Futures'];
+    const swLabels = ['Kuwasaidia Yatima', 'Msaada wa Elimu', 'Chakula na Mahitaji ya Msingi', 'Kujenga Maisha Bora'];
+    el.textContent = (sw ? swLabels : en)[i];
+  });
+
+  document.querySelector('#events h2').textContent = sw ? 'Miradi Ijayo' : 'Upcoming Projects';
+  document.querySelector('#events article h3').textContent = sw ? 'Mega Pads Drive — Lamu' : 'Mega Pads Drive — Lamu';
+
+  document.querySelector('#events article a').textContent = sw ? 'Wasiliana Nasi' : 'Contact Us';
+
+  document.querySelector('footer > div:nth-child(2) a:nth-of-type(1)').textContent = sw ? 'Mwanzo' : 'Home';
+  document.querySelector('footer > div:nth-child(2) a:nth-of-type(2)').textContent = sw ? 'Kuhusu Sisi' : 'About Us';
+  document.querySelector('footer > div:nth-child(2) a:nth-of-type(3)').textContent = sw ? 'Programu' : 'Programs';
+  document.querySelector('footer > div:nth-child(2) a:nth-of-type(4)').textContent = sw ? 'Wasiliana Nasi' : 'Contact';
 }
 </script>
+
 
 </body>
 </html>
