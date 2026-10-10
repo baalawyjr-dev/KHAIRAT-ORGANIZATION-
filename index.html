@@ -62,10 +62,12 @@
 </p>
         
 
-      <div class="hero-buttons">
-        <a href="#donate" class="btn gold">💚 Donate Now</a>
-        <a href="#about" class="btn outline">Learn More →</a>
-      </div>
+      
+<div class="hero-buttons">
+    <a href="#donate" class="btn gold" id="hero-donate">💚 Donate Now</a>
+    <a href="#about" class="btn outline" id="hero-learn">Learn More →</a>
+</div>
+
     </div>
 
     <div class="hero-image">
@@ -338,6 +340,12 @@
 function setLanguage(lang) {
   const sw = lang === 'sw';
  
+  document.querySelector('#hero-donate').textContent =
+    sw ? '💚 Changia Sasa' : '💚 Donate Now';
+
+  document.querySelector('#hero-learn').textContent =
+    sw ? 'Jifunze Zaidi →' : 'Learn More →';
+
   document.querySelector('#hero-description').textContent =
     sw
       ? 'Khyrat Organisation imejitolea kuwasaidia yatima na watoto walio katika mazingira magumu kupitia malezi, elimu, mahitaji ya msingi na fursa za maisha bora ya baadaye.'
